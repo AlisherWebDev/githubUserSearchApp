@@ -1,0 +1,346 @@
+html[data-theme="dark"]{
+    --bgcolor: #141D2F;
+    --headerNavB:#FFFFFF;
+    --headerNightDay-color:#FFFFFF;
+    --githubSearchForm:#1E2A47; 
+    --githubSearchInput:#FFFFFF;
+    --githubprofile-bgc-color: #1E2A47;
+    --profileAbout-b-color: #fff;
+    --text-colorlightDARK: #FFF;
+    --userName-bio-color:#fff;
+    --aboutFollowers-bgc-color:#141D2F;
+    --display-block-none: block;
+  }
+  html[data-theme="light"]{
+    --text-colorlightDARK:#697C9A;
+    --bgColor: #F2F2F2;
+    --headerNavB: #222731;
+    --headerNightDay-color:#697C9A;
+    --githubSearchForm:#FEFEFE; 
+    --githubSearchInput: #222731;
+    --githubprofile-bgc-color: #fefefe;
+    --profileAbout-b-color: #2B3442;
+    --userName-bio-color: #4B6A9B;
+    --aboutFollowers-bgc-color:#F6F8FF;
+    --display-block-none: none;
+  }
+  html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+html[data-theme="light"] .light--mode{
+  display: var(--display-block-none);
+}
+html[data-theme="dark"] .dark--mode{
+  display: var(--display-block-none);
+}
+  
+  @font-face {
+    font-family: spaceRegular;
+    src: url(/Fonts/SpaceMono/SpaceMono-Regular.ttf);
+  }
+  
+  
+  body {
+    margin: 0;
+    background-color: var(--bgcolor);
+    font-family: spaceRegular;
+    
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+   
+  }
+  
+ 
+  .container{
+    max-width: 730px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    
+   
+  
+  }
+  .header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 35px;
+  
+  
+  }
+  
+  .header__nav b{
+    font-family: spaceRegular;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: var(--headerNavB);
+    cursor: pointer;
+    
+  }
+  
+  .header__night-day{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    outline: none;
+    background: none;
+  
+  }
+  
+  .header__night-day p{
+    font-family: spaceRegular;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: right;
+    letter-spacing: 2.5px;
+    color: var(--headerNightDay-color);
+  }
+  .header__night-day i{
+    margin-left: 7px;
+    color: var(--headerNightDay-color);
+    font-size: 18px;
+    transform: rotate(-17deg);
+    margin-top: -15px;
+  }
+  .github__search form{
+    max-width: 730px; 
+    width: 100%;
+    height: 69px;
+    background-color:var(--githubSearchForm);
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  
+  }
+  .github__search i{
+    color: #0079FF;
+    padding-left: 32px;
+    padding-right: 10px;
+    transform: rotate(6deg);
+    font-size: 20px;
+  }
+  
+  .github__search input{
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 530px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: var(--githubSearchInput);
+    background: var(--githubSearchForm);
+  
+  }
+  .github__search input::placeholder{
+    font-family: spaceRegular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* color: var(--githubSearchInput);
+    background-color: var(--githubSearchForm); */
+  }
+  
+  .github__search button{
+  
+    font-family: spaceRegular;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #0079FF;
+    border-radius: 10px;
+    padding: 12.5px 24px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  
+  
+  }
+  .github__search button:hover{
+    background-color: #0079FF;
+  }
+  
+  /* gitHub search qismi tugadi. */
+  
+  
+  /* .github__profile--account qismi boshlandi */
+   
+  .github__profile--account{
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+  }
+  .profile__img{
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  #profileImgId{
+    width: inherit;
+    height: inherit;
+  }
+  .profile__date--time{
+    margin-top: -10px;
+  
+  }
+  .profile__date--time p{
+    display: flex;
+   
+  }
+  
+  /* profile__about qismi boshlandi */
+  
+  .github__profile{
+    background: var(--githubprofile-bgc-color);
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    margin-top: 24px;
+    padding: 48px;
+  }
+  
+  .profile__about b{
+    font-family: spaceRegular;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+    color: var(--profileAbout-b-color);  
+   }
+  .profile__about a {
+    display: block;
+    font-family: spaceRegular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0079FF;
+  
+   }
+  
+    .profile__about span{
+      font-family: spaceRegular;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      color: #4B6A9B;
+      mix-blend-mode: normal;
+      opacity: 0.75;
+      margin-top: 20px;
+  
+    }
+    
+    .profile__date--time p{
+      font-family: spaceRegular;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      color:var(--text-colorlightDARK);
+      margin-top: 20px;
+    }
+    .profileAbout{
+      color: var(--userName-bio-color);
+    }
+  
+    /* Content__about  begin */
+  
+    .about__followers{
+      
+      display: flex;
+      justify-content: space-evenly;
+      background: var(--aboutFollowers-bgc-color);
+      border-radius: 10px;
+      padding: 15px 17px;
+      margin: 0 10px;
+    }
+    
+    .follow__followers p{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19px;
+  
+      color: var(--text-colorlightDARK);
+    }
+    .follow__followers b{
+     
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 33px;
+      text-transform: uppercase;
+      color: var(--text-colorlightDARK);
+    }
+  
+    .content__about--page {
+      padding-left: 10px;
+  
+    }
+    .footer__link{
+     margin-top: 25px;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     
+    
+    }
+    .link__left--1 {
+     display: flex; 
+     padding: 10px;
+     align-items: center;
+    }
+
+    .link__left--1 i {
+      color: var(--text-colorlightDARK);
+      margin-right: 6px;
+      font-size: 14px;
+  
+    }
+  
+    .link__left--1 a {
+      display: block;
+      initial-letter-align: initial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--text-colorlightDARK);
+      word-break: break-all;
+      letter-spacing: -1px;
+      text-decoration: none;
+    }
+    .link__left--1 a:hover{
+      text-decoration: underline;
+      transition: all .4s;
+    }
+    
